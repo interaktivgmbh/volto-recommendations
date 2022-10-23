@@ -1,19 +1,19 @@
-import {RecommendationsEditBlock, RecommendationsViewBlock} from './Recommendations';
+import {
+  RecommendationsEditBlock,
+  RecommendationsViewBlock,
+} from './Recommendations';
 import downloadSVG from '@plone/volto/icons/download.svg';
 import reducers from '@interaktiv/volto-recommendations/reducers';
-import RecommendationsConfigurationWidget
-  from '@interaktiv/volto-recommendations/widget/RecommendationsConfigurationWidget';
+import RecommendationsRefreshWidget from '@interaktiv/volto-recommendations/widgets/RecommendationsRefreshWidget';
+import RecommendationsImportTestDataWidget from '@interaktiv/volto-recommendations/widgets/RecommendationsImportTestDataWidget';
 
-export {
-  RecommendationsConfigurationWidget
-};
-
+export { RecommendationsRefreshWidget, RecommendationsImportTestDataWidget };
 
 const applyConfig = (config) => {
-
   config.widgets.id = {
     ...config.widgets.id,
-    recommendation_configuration: RecommendationsConfigurationWidget,
+    dummy_refresh: RecommendationsRefreshWidget,
+    dummy_import_testdata: RecommendationsImportTestDataWidget,
   };
 
   config.addonReducers = { ...config.addonReducers, ...reducers };
