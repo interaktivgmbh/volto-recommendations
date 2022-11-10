@@ -1,6 +1,6 @@
-
 export {
   getRecommendations,
+  getRecommenderInfo,
   refreshRecommendations,
-  importNewsgroups
+  importNewsgroups,
 } from '@interaktiv/volto-recommendations/actions/recommendations/recommendations';

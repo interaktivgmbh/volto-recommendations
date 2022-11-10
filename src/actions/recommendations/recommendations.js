@@ -1,8 +1,8 @@
-
 import {
   GET_RECOMMENDATIONS,
   REFRESH_RECOMMENDATIONS,
-  IMPORT_NEWSGROUPS
+  GET_RECOMMENDER_INFO,
+  IMPORT_NEWSGROUPS,
 } from '@interaktiv/volto-recommendations/constants/ActionTypes'
 
 export function getRecommendations(contextURL, max) {
@@ -18,10 +18,9 @@ export function getRecommendations(contextURL, max) {
     request: {
       op: 'post',
       path: path,
-      data: data
+      data: data,
     },
   };
-
 }
 
 export function refreshRecommendations() {
@@ -31,10 +30,21 @@ export function refreshRecommendations() {
     type: REFRESH_RECOMMENDATIONS,
     request: {
       op: 'post',
-      path: path
+      path: path,
     },
   };
+}
 
+export function getRecommenderInfo() {
+  const path = '/@recommenderinfo';
+
+  return {
+    type: GET_RECOMMENDER_INFO,
+    request: {
+      op: 'post',
+      path: path,
+    },
+  };
 }
 
 export function importNewsgroups() {
@@ -44,8 +54,7 @@ export function importNewsgroups() {
     type: IMPORT_NEWSGROUPS,
     request: {
       op: 'post',
-      path: path
+      path: path,
     },
   };
-
 }

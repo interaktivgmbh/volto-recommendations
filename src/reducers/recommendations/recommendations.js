@@ -1,15 +1,15 @@
-
 import {
   GET_RECOMMENDATIONS,
   REFRESH_RECOMMENDATIONS,
-  IMPORT_NEWSGROUPS
+  GET_RECOMMENDER_INFO,
+  IMPORT_NEWSGROUPS,
 } from '@interaktiv/volto-recommendations/constants/ActionTypes'
-
 
 const initialState = {
   items: [],
-  debug: false
-}
+  info: {},
+  debug: false,
+};
 
 // DO NOT MUTATE (the state)
 // https://redux.js.org/usage/structuring-reducers/immutable-update-patterns
@@ -39,6 +39,7 @@ export default function recommendations(state = initialState, action = {}) {
         loaded: false,
         loading: false,
       };
+
     case `${REFRESH_RECOMMENDATIONS}_PENDING`:
       return {
         ...state,
@@ -62,6 +63,29 @@ export default function recommendations(state = initialState, action = {}) {
         loaded: false,
         loading: false,
         refreshed: false,
+      };
+
+    case `${GET_RECOMMENDER_INFO}_PENDING`:
+      return {
+        ...state,
+        error: null,
+        loaded: false,
+        loading: true,
+      };
+    case `${GET_RECOMMENDER_INFO}_SUCCESS`:
+      return {
+        ...state,
+        error: null,
+        info: action.result.info,
+        loaded: true,
+        loading: false,
+      };
+    case `${GET_RECOMMENDER_INFO}_FAIL`:
+      return {
+        ...state,
+        error: null,
+        loaded: false,
+        loading: false,
       };
 
     case `${IMPORT_NEWSGROUPS}_PENDING`:

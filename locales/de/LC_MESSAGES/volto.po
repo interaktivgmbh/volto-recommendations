@@ -33,6 +33,16 @@ msgstr "Empfehlungen werden Aktualisiert. Dies kann einen Moment dauern."
 msgid "trans_label_refreshing_succesful"
 msgstr "Empfehlungen wurden erfolgreich Aktualisiert."
 
+#: widget/RecommendationsInfoWidget
+# defaultMessage: Number of Vectorized Content:
+msgid "trans_label_info_vectors"
+msgstr "Anzahl vectorisierter Inhalte:"
+
+#: widget/RecommendationsInfoWidget
+# defaultMessage: Number of Dimensions:
+msgid "trans_label_info_dimensions"
+msgstr "Anzahl Vektordimensionen:"
+
 #: widget/RecommendationsConfigurationWidget
 # defaultMessage: Import Newsgroups
 msgid "trans_label_import_newsgroups"
