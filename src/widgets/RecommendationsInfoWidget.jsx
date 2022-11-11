@@ -29,26 +29,40 @@ const RecommendationsInfoWidget = ({
   intl,
 }) => {
   const dispatch = useDispatch();
-  const info = useSelector((state) => state.recommendations?.info || {}, );
+  const info = useSelector((state) => state.recommendations?.info || {});
 
   React.useEffect(() => {
     dispatch(getRecommenderInfo());
   }, []);
 
-  return (
-    <div className="recommendation-configuration-wrapper">
-      <Segment>
-        <List>
-          <List.Item>
-            <Label>{intl.formatMessage(messages.trans_label_info_vectors)}</Label> {info.vectors}
-          </List.Item>
-          <List.Item>
-            <Label>{intl.formatMessage(messages.trans_label_info_dimensions)}</Label> {info.dimensions}
-          </List.Item>
-        </List>
-      </Segment>
-    </div>
-  );
+  if (!info.error) {
+    return (
+      <div className="recommendation-configuration-wrapper">
+        <Segment>
+          <List>
+            <List.Item>
+              <Label>
+                {intl.formatMessage(messages.trans_label_info_vectors)}
+              </Label>
+              {info.vectors}
+            </List.Item>
+            <List.Item>
+              <Label>
+                {intl.formatMessage(messages.trans_label_info_dimensions)}
+              </Label>{' '}
+              {info.dimensions}
+            </List.Item>
+          </List>
+        </Segment>
+      </div>
+    );
+  } else {
+    return (
+      <div className="recommendation-configuration-wrapper">
+        <Segment><Label>Fehler:</Label> {info.error}</Segment>
+      </div>
+    );
+  }
 };
 
 export default injectIntl(RecommendationsInfoWidget);
