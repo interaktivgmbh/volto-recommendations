@@ -34,9 +34,14 @@ msgid "trans_label_refreshing_succesful"
 msgstr "Empfehlungen wurden erfolgreich Aktualisiert."
 
 #: widget/RecommendationsInfoWidget
-# defaultMessage: Number of Vectorized Content:
-msgid "trans_label_info_vectors"
-msgstr "Anzahl vectorisierter Inhalte:"
+# defaultMessage: Letzte Aktualisierung at:
+msgid "trans_label_recommender_info_last_refresh"
+msgstr "Letzte Aktualisierung am:"
+
+#: widget/RecommendationsInfoWidget
+# defaultMessage: Last refresh on:
+msgid "trans_label_info_last_refresh"
+msgstr "Letzte Aktualisierung am:"
 
 #: widget/RecommendationsInfoWidget
 # defaultMessage: Number of Dimensions:

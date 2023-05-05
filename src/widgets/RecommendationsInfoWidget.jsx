@@ -9,6 +9,10 @@ const messages = defineMessages({
     id: 'trans_label_error',
     defaultMessage: 'Error',
   },
+  trans_label_info_last_refresh: {
+    id: 'trans_label_info_last_refresh',
+    defaultMessage: 'Last refresh on:',
+  },
   trans_label_info_vectors: {
     id: 'trans_label_info_vectors',
     defaultMessage: 'Number of Vectorized Content:',
@@ -40,6 +44,14 @@ const RecommendationsInfoWidget = ({
       <div className="recommendation-configuration-wrapper">
         <Segment>
           <List>
+            <List.Item>
+              <Label>
+                {intl.formatMessage(
+                  messages.trans_label_info_last_refresh
+                )}
+              </Label>
+              {info.last_refresh}
+            </List.Item>
             <List.Item>
               <Label>
                 {intl.formatMessage(messages.trans_label_info_vectors)}
