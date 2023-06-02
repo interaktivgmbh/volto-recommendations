@@ -15,11 +15,11 @@ const messages = defineMessages({
   },
   trans_label_info_vectors: {
     id: 'trans_label_info_vectors',
-    defaultMessage: 'Number of Vectorized Content:',
+    defaultMessage: 'Number of vectorized content:',
   },
   trans_label_info_dimensions: {
     id: 'trans_label_info_dimensions',
-    defaultMessage: 'Number of Dimensions:',
+    defaultMessage: 'Number of dimensions:',
   },
 });
 
