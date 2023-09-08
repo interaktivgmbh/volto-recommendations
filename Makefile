@@ -13,7 +13,7 @@ MAKEFLAGS+=--no-builtin-rules
 # Project settings
 
 DIR=$(shell basename $$(pwd))
-ADDON ?= "@interaktiv/volto-recommendations"
+ADDON ?= "@interaktivgmbh/volto-recommendations"
 
 # Recipe snippets for reuse
 
