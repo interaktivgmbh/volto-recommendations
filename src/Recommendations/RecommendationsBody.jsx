@@ -4,7 +4,7 @@ import { defineMessages, injectIntl } from "react-intl";
 import { Message } from "semantic-ui-react";
 import { flattenToAppURL } from "@plone/volto/helpers";
 import { useDispatch, useSelector} from 'react-redux';
-import { getRecommendations } from '@interaktiv/volto-recommendations/actions'
+import { getRecommendations } from '@interaktivgmbh/volto-recommendations/actions'
 import { Label } from 'semantic-ui-react';
 import { getBaseUrl } from '@plone/volto/helpers';
 

@@ -3,10 +3,10 @@ import {
   RecommendationsViewBlock,
 } from './Recommendations';
 import downloadSVG from '@plone/volto/icons/download.svg';
-import reducers from '@interaktiv/volto-recommendations/reducers';
-import RecommendationsRefreshWidget from '@interaktiv/volto-recommendations/widgets/RecommendationsRefreshWidget';
-import RecommendationsInfoWidget from '@interaktiv/volto-recommendations/widgets/RecommendationsInfoWidget';
-import RecommendationsImportTestDataWidget from '@interaktiv/volto-recommendations/widgets/RecommendationsImportTestDataWidget';
+import reducers from '@interaktivgmbh/volto-recommendations/reducers';
+import RecommendationsRefreshWidget from '@interaktivgmbh/volto-recommendations/widgets/RecommendationsRefreshWidget';
+import RecommendationsInfoWidget from '@interaktivgmbh/volto-recommendations/widgets/RecommendationsInfoWidget';
+import RecommendationsImportTestDataWidget from '@interaktivgmbh/volto-recommendations/widgets/RecommendationsImportTestDataWidget';
 
 export {
   RecommendationsRefreshWidget,

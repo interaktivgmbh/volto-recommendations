@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Label, Segment } from 'semantic-ui-react';
-import { refreshRecommendations } from '@interaktiv/volto-recommendations/actions';
+import { refreshRecommendations } from '@interaktivgmbh/volto-recommendations/actions';
 import { defineMessages, injectIntl } from 'react-intl';
 import { Loader } from 'semantic-ui-react';
 import { toast } from 'react-toastify';

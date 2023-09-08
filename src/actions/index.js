@@ -3,4 +3,4 @@ export {
   getRecommenderInfo,
   refreshRecommendations,
   importNewsgroups,
-} from '@interaktiv/volto-recommendations/actions/recommendations/recommendations';
+} from '@interaktivgmbh/volto-recommendations/actions/recommendations/recommendations';

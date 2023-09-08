@@ -3,7 +3,7 @@ import {
   REFRESH_RECOMMENDATIONS,
   GET_RECOMMENDER_INFO,
   IMPORT_NEWSGROUPS,
-} from '@interaktiv/volto-recommendations/constants/ActionTypes'
+} from '@interaktivgmbh/volto-recommendations/constants/ActionTypes'
 
 export function getRecommendations(contextURL, max) {
   const path = `${contextURL}/@recommendations`;

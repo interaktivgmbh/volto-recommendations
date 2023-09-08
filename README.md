@@ -32,19 +32,12 @@ eggs =
 
 
 ### 2. Add the recommendations package to the frontend (Volto only)
-#### File: mrs.developer.json
-```json
-{
-  "volto-recommendations": {
-    "url": "git@github.com:interaktivgmbh/volto-recommendations.git",
-    "path": "src",
-    "package": "@interaktiv/volto-recommendations",
-    "branch": "main"
-  }
-}
-```
 #### File: package.json
 ```json
+  "dependencies": {
+    "@interaktivgmbh/volto-recommendations": "*"
+  }
+
   "addons": [
     "@interaktivgmbh/volto-recommendations"
   ]
